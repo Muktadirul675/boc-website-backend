@@ -1,0 +1,179 @@
+{% extends "./base.html" %}
+{% load static %}
+{% block body %}
+
+<main class="py-5">
+    <div class="container">
+        <div class="row pt-5 text-center">
+            <div class="col-md-6 col-12">
+                <div class="container">
+                    <lottie-player src="{% static 'js/json/olympiadian.json' %}" background="transparent" speed="1" loop
+                        autoplay>
+                    </lottie-player>
+                </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="p-5">
+                    <h3>Register an Olympiadian account</h3>
+                    <div class="row">
+                        {% for m in messages %}
+                            <div class="col-12">
+                                <div class="alert alert-danger">
+                                    {{m}}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <hr><br>
+                    <form action="#" method="POST" class="text-start">
+                        {% csrf_token %}
+                        <h5>First Name <sup class="text-primary">*</sup></h5>
+                        <input name="first-name" type="text" class="form-control" required>
+                        <br>
+                        <h5>Last Name <sup class="text-primary">*</sup></h5>
+                        <input name="last-name" type="text" class="form-control" required>
+                        <br>
+                        <h5>Email Address <sup class="text-primary">*</sup></h5>
+                        <input name="email" placeholder="example@gmail.com" type="text" class="form-control" required>
+                        <br>
+                        <h5>Password <sup class="text-primary">*</sup></h5>
+                        <input name="password" type="password" class="form-control" required>
+                        <br>
+                        <h5>Confirm Password <sup class="text-primary">*</sup></h5>
+                        <input name="c-password" type="password" class="form-control" required>
+                        <input type="submit" value="Register" class="btn btn-primary my-2 w-100">
+                    </form>
+                    <p class="my-1">Already have an Olympiadian account? <a href="{% url 'boc:sign_in' %}">Login</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="features" class="features">
+        <div class="container" data-aos="fade-up">
+            <!-- <header class="section-header">
+                <h2>Facilities of</h2>
+                <p>being an Premium Olympiadian of BOC</p>
+              </header>
+              <div class="row">
+                <div class="col-lg-12 mt-5 mt-lg-0 d-flex">
+                  <div class="row align-self-center gy-4">
+                    <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
+                      <div class="feature-box d-flex align-items-center">
+                        <i class="bi bi-check"></i>
+                        <h3>Stay close to BOC Panel</h3>
+                      </div>
+                    </div>
+                    <div class="col-md-6" data-aos="zoom-out" data-aos-delay="300">
+                      <div class="feature-box d-flex align-items-center">
+                        <i class="bi bi-check"></i>
+                        <h3>Free participation in BOC's events</h3>
+                      </div>
+                    </div>
+                    <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400">
+                      <div class="feature-box d-flex align-items-center">
+                        <i class="bi bi-check"></i>
+                        <h3>Free participation in BOC's workshops</h3>
+                      </div>
+                    </div>
+                    <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500">
+                      <div class="feature-box d-flex align-items-center">
+                        <i class="bi bi-check"></i>
+                        <h3>16/7 support for problem-solving</h3>
+                      </div>
+                    </div>
+                    <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">
+                      <div class="feature-box d-flex align-items-center">
+                        <i class="bi bi-check"></i>
+                        <h3>Olympiad Training camp each weekends</h3>
+                      </div>
+                    </div>
+                    <div class="col-md-6" data-aos="zoom-out" data-aos-delay="700">
+                      <div class="feature-box d-flex align-items-center">
+                        <i class="bi bi-check"></i>
+                        <h3>Special Olympiads for Olympiadians every month</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+            <div class="row feture-tabs" data-aos="fade-up">
+                <div class="col-lg-12">
+                    <h3>Olympiadians' Facilities</h3>
+                    <ul class="nav nav-pills mb-3">
+                        <li>
+                            <a class="nav-link active" data-bs-toggle="pill" href="#tab1">Olympiad News</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" data-bs-toggle="pill" href="#tab2">Problem Solving</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" data-bs-toggle="pill" href="#tab3">Participation</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="tab1">
+                            <p>Olympiadians will get updates about Olympiad news by our Website, Facebook Page and
+                                other social
+                                medias</p>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-check2"></i>
+                                <h4>Email Updates</h4>
+                            </div>
+                            <p>Olympiadians will get updates through email about Olympiads, BOC Events, BOC
+                                Workshops and others</p>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-check2"></i>
+                                <h4>Website Notification</h4>
+                            </div>
+                            <p>In the 'Notification' option inside 'My Account', you can also see notification about
+                                all blog posts,
+                                including Olympiads, Events and so on.</p>
+                        </div>
+                        <div class="tab-pane fade show" id="tab2">
+                            <p>Olympiadians will get opportunity of participating in Problem Solving on our website
+                            </p>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-check2"></i>
+                                <h4>Problem posting and answering</h4>
+                            </div>
+                            <p>Olympiadians can post problems in our 'Problem Solving' option in our website. Also
+                                they can solve
+                                other Olympiadians' problems.</p>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <h4>16/7 Support if you got stuck</h4>
+                            </div>
+                            <p>Premium Olympiadians (Upcoming Membership Package) will get 16/7 supports from BOC
+                                Academic
+                                Department if they got stuck in any Problems.</p>
+                        </div>
+                        <div class="tab-pane fade show" id="tab3">
+                            <p>Olympiadians can participate in event and workshops organized by Bangladesh
+                                Olympiadians Club.
+                                Registration fee is not required for Premium Olympiadians</p>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-check2"></i>
+                                <h4>Events</h4>
+                            </div>
+                            <p>We organize big online events for boosting Olympiadians' skills on specific
+                                topic/subject.
+                                Olympiadians can participate in these events and win attractive prizes!</p>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-check2"></i>
+                                <h4>Workshops</h4>
+                            </div>
+                            <p>We organize workshops for boosting Olympiadians' skills on specific topic/subject.
+                                These workshops'
+                                classes are taken by skilled trainers. Olympiadians can participate in these
+                                workshops and boost their
+                                success rate at Olympiads!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+{% endblock %}

@@ -1,0 +1,313 @@
+{% extends "./base.html" %}
+{% load static %}
+
+{% block body %}
+  <section id="hero" class="hero d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+          <h1 data-aos="fade-up">Bangladesh Olympiadians Club</h1>
+          <h2 data-aos="fade-up" data-aos-delay="400">One of the best platforms for Olympiadians
+          </h2>
+          <div data-aos="fade-up" data-aos-delay="600">
+            <div class="text-center text-lg-start">
+              <a href="https://facebook.com/bangladesholympiadiansclub" target="_blank"
+                class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>Visit Facebook Page</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          <lottie-player src="{%  static 'js/json/education-blue.json' %}" background="transparent" speed="1" loop autoplay>
+          </lottie-player>
+        </div>
+      </div>
+    </div>
+  </section>
+  <main id="main">
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+        <div class="row gx-0">
+          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="content">
+              <h3>About us</h3>
+              <p>Bangladesh Olympiadians Club is a non-profit organization which works for spreading Olympiads to
+                everywhere
+                in Bangladesh. Our primary target is to inform every Olympiad news to Olympiadians and make them more
+                efficient to these Olympiads. Already we organized <span class="text-success">4 Big Events, 2 Workshops,
+                  2
+                  Live "Olympiad Adda" Session, 6 Tiny Quiz Contests</span> and we're continuing our regular activities
+                such
+                as <span class="text-success">Weekly Subject-Wise Problem Solving, Problem Solving on Website, Weekly
+                  Quiz
+                  Contest</span> etc.</p>
+              <div class="text-center text-lg-start">
+                <a href="{% url 'boc:about' %}"
+                  class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+                  <span>See More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+            <img style="margin-left: auto; margin-right: auto" src="{%  static 'img/about-logo.png' %}" class="w-50" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="values" class="values">
+      <div class="container" data-aos="fade-up">
+        <header class="section-header">
+          <h2>Our Works</h2>
+          <p>We're committed to spread Olympiads all over the Bangladesh</p>
+        </header>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="box" data-aos="fade-up" data-aos-delay="200">
+              <lottie-player class="img-fluid" src="{% static 'js/json/news.json' %}" background="transparent" speed="1" loop
+                autoplay>
+              </lottie-player>
+              <h3>We provide all Olympiad news</h3>
+              <p>Olympiadians often misses Olympiads for not knowing about when will the Olympiad happen. Stay with BOC
+                and you'll never miss any national Olympiad.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box d-flex flex-column align-items-center justify-content-start" data-aos="fade-up"
+              data-aos-delay="400">
+              <div style="height: 190px; width: 190px; margin-bottom: 10px;">
+                <lottie-player class="img-fluid" src="{% static 'js/json/event.json' %}" background="transparent" speed="1"
+                  loop autoplay>
+                </lottie-player>
+              </div>
+              <div>
+                <h3>We organize various online events</h3>
+                <p>Olympiadians registered for a Olympiad but they often don't know how to do better, what's the
+                  syllabus
+                  in the Olympiad etc. We organize various online events for practice of upcoming Olympiads.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box d-flex flex-column align-items-center justify-content-start" data-aos="fade-up"
+              data-aos-delay="400">
+              <div style="height: 190px; width: 190px; margin-bottom: 10px;">
+                <lottie-player class="img-fluid" src="{% static 'js/json/workshop.json' %}" background="transparent" speed="1"
+                  loop autoplay>
+                </lottie-player>
+              </div>
+              <div>
+                <h3>We organize online workshops</h3>
+                <p>Olympiad isn't limited to textbook. To understand the question pattern and boost Olympiadians' skill
+                  on
+                  those creative questions, we organize workshops to train our Olympiadians</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="counts" class="counts">
+      <div class="container" data-aos="fade-up">
+        <div class="row gy-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-person"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1"
+                  class="purecounter"></span>
+                <p>Olympiadians</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-people" style="color: #ee6c20;"></i>
+              <div>
+                <span data-purecounter-start="1" data-purecounter-end="16000" data-purecounter-duration="1"
+                  class="purecounter"></span>
+                <p>Community Members</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-calendar-event" style="color: #15be56;"></i>
+              <div>
+                <span data-purecounter-start="1" data-purecounter-end="11" data-purecounter-duration="1"
+                  class="purecounter"></span>
+                <p>Events</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-person-badge" style="color: #bb0852;"></i>
+              <div>
+                <span data-purecounter-start="1" data-purecounter-end="41" data-purecounter-duration="1"
+                  class="purecounter"></span>
+                <p>Panel Members</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="features" class="features">
+      <div class="container" data-aos="fade-up">
+        <!-- <header class="section-header">
+          <h2>Facilities of</h2>
+          <p>being an Premium Olympiadian of BOC</p>
+        </header>
+        <div class="row">
+          <div class="col-lg-12 mt-5 mt-lg-0 d-flex">
+            <div class="row align-self-center gy-4">
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Stay close to BOC Panel</h3>
+                </div>
+              </div>
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="300">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Free participation in BOC's events</h3>
+                </div>
+              </div>
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Free participation in BOC's workshops</h3>
+                </div>
+              </div>
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>16/7 support for problem-solving</h3>
+                </div>
+              </div>
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Olympiad Training camp each weekends</h3>
+                </div>
+              </div>
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="700">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>Special Olympiads for Olympiadians every month</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <div class="row feture-tabs" data-aos="fade-up">
+          <div class="col-lg-12">
+            <h3>Olympiadians' Facilities</h3>
+            <ul class="nav nav-pills mb-3">
+              <li>
+                <a class="nav-link active" data-bs-toggle="pill" href="#tab1">Olympiad News</a>
+              </li>
+              <li>
+                <a class="nav-link" data-bs-toggle="pill" href="#tab2">Problem Solving</a>
+              </li>
+              <li>
+                <a class="nav-link" data-bs-toggle="pill" href="#tab3">Participation</a>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="tab1">
+                <p>Olympiadians will get updates about Olympiad news by our Website, Facebook Page and other social
+                  medias</p>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-check2"></i>
+                  <h4>Email Updates</h4>
+                </div>
+                <p>Olympiadians will get updates through email about Olympiads, BOC Events, BOC Workshops and others</p>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-check2"></i>
+                  <h4>Website Notification</h4>
+                </div>
+                <p>In the 'Notification' option inside 'My Account', you can also see notification about all blog posts,
+                  including Olympiads, Events and so on.</p>
+              </div>
+              <div class="tab-pane fade show" id="tab2">
+                <p>Olympiadians will get opportunity of participating in Problem Solving on our website</p>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-check2"></i>
+                  <h4>Problem posting and answering</h4>
+                </div>
+                <p>Olympiadians can post problems in our 'Problem Solving' option in our website. Also they can solve
+                  other Olympiadians' problems.</p>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-check-circle-fill"></i>
+                  <h4>16/7 Support if you got stuck</h4>
+                </div>
+                <p>Premium Olympiadians (Upcoming Membership Package) will get 16/7 supports from BOC Academic
+                  Department if they got stuck in any Problems.</p>
+              </div>
+              <div class="tab-pane fade show" id="tab3">
+                <p>Olympiadians can participate in event and workshops organized by Bangladesh Olympiadians Club.
+                  Registration fee is not required for Premium Olympiadians</p>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-check2"></i>
+                  <h4>Events</h4>
+                </div>
+                <p>We organize big online events for boosting Olympiadians' skills on specific topic/subject.
+                  Olympiadians can participate in these events and win attractive prizes!</p>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-check2"></i>
+                  <h4>Workshops</h4>
+                </div>
+                <p>We organize workshops for boosting Olympiadians' skills on specific topic/subject. These workshops'
+                  classes are taken by skilled trainers. Olympiadians can participate in these workshops and boost their
+                  success rate at Olympiads!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="recent-blog-posts" class="recent-blog-posts">
+      <div class="container" data-aos="fade-up">
+        <header class="section-header">
+          <h2>Blog</h2>
+          <p>Recent posts form our Blog</p>
+        </header>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="post-box">
+              <div class="post-img"><img src="assets/img/blog/blog-1.jpg" class="img-fluid" alt=""></div>
+              <span class="post-date">Tue, September 15</span>
+              <h3 class="post-title">Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit</h3>
+              <a href="./pages/blog-post.html" class="readmore stretched-link mt-auto"><span>Read More</span><i
+                  class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="post-box">
+              <div class="post-img"><img src="assets/img/blog/blog-2.jpg" class="img-fluid" alt=""></div>
+              <span class="post-date">Fri, August 28</span>
+              <h3 class="post-title">Et repellendus molestiae qui est sed omnis voluptates magnam</h3>
+              <a href="./pages/blog-post.html" class="readmore stretched-link mt-auto"><span>Read More</span><i
+                  class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="post-box">
+              <div class="post-img"><img src="assets/img/blog/blog-3.jpg" class="img-fluid" alt=""></div>
+              <span class="post-date">Mon, July 11</span>
+              <h3 class="post-title">Quia assumenda est et veritatis aut quae</h3>
+              <a href="./pages/blog-post.html" class="readmore stretched-link mt-auto"><span>Read More</span><i
+                  class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+{% endblock %}
